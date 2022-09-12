@@ -1,4 +1,3 @@
-#define function%0(%1)  forward %0(%1); public %0(%1)
 #define MAX_LABEL		200
 
 enum LabelEnum
@@ -24,7 +23,8 @@ ReloadLabel(labelid) {
     return 1;
 }
 
-function LoadDynamicLabel()
+forward LoadDynamicLabel();
+public LoadDynamicLabel()
 {
 	new rows = cache_num_rows();
 	if(rows) 
@@ -49,7 +49,8 @@ function LoadDynamicLabel()
 	return 1;
 }
 
-function CreateDynamicLabel(playerid, labelid, name[], Float:x, Float:y, Float:z, Float:a)
+forward CreateDynamicLabel(playerid, labelid, name[], Float:x, Float:y, Float:z, Float:a);
+public CreateDynamicLabel(playerid, labelid, name[], Float:x, Float:y, Float:z, Float:a)
 {
 	strcpy(LabelInfo[labelid][lbName], name, 258);
 	LabelInfo[labelid][lbExists] = 1;
