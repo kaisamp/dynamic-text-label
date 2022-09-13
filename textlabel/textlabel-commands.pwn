@@ -1,3 +1,13 @@
+/*
+
+	SA-MP Dynamic Textlabels
+    developed: 2021
+    compatible with: 0.3.7
+
+	Current Developer: 
+        -> Genjii#4764 - Head Development Legacy Gaming 
+*/
+
 CMD:createlabel(playerid, params[])
 {
     new name[258], Float:x, Float:y, Float:z, Float:a;
