@@ -73,3 +73,9 @@ public CreateDynamicLabel(playerid, labelid, name[], Float:x, Float:y, Float:z, 
 	ReloadLabel(labelid);
 	SendAdminMessage(COLOR_LIGHTRED,"AdmCmd: %s has created text label %d", GetPlayerNameEx(playerid), labelid);
 }
+
+public OnGameModeInit()
+{
+	mysql_tquery(connectionID, "SELECT * FROM `textlabels`", "LoadDynamicLabel", "");
+	return 1;
+}
